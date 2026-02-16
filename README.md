@@ -117,6 +117,114 @@ Concluindo, os dados pré-processados foram armazenados em um arquivo `Carr_data
 
 **Arquivo: analise_estatistica.py**
 
+Esta etapa do projeto teve como objetivo realizar uma análise estatística descritiva do Car Evaluation, após o pré-processamento e a codificação das variáveis categóricas em valores numéricos ordinais.
+A análise buscou:
+* Compreender o comportamento das variáveis após o pré-processamento
+* Avaliar medidas de tendência central 
+
+**Medidas de Tendência Central e Disperção**
+Foram calculadas média, mediana, moda, variância, desvio-padrão e amplitude para cada variável.
+```
+    Buying e Maint
+Métrica	          Valor
+Média	            2.50
+Mediana           2.5
+Moda             	1
+Variância	        1.25
+Desvio-padrão	    1.12
+Amplitude	        3
+```
+
+
+
+Essas variáveis apresentam distribuição perfeitamente simétrica, com média centralizada no intervalo possível (1 a 4).
+
+A variância de 1.25 e o desvio-padrão de 1.12 indicam boa dispersão ao longo das categorias.
+
+Isso confirma que o dataset possui estrutura equilibrada nas variáveis explicativas, já que foi construído combinando sistematicamente todas as possibilidades de atributos.
+
+```
+         Doors
+Métrica	          Valor
+Média	            3.50
+Mediana	          3.5
+Moda	            2
+Variância	        1.25
+Desvio-padrão    	1.12
+Amplitude	        3
+```
+A média elevada (3.5) é consequência da escala adotada (2, 3, 4, 5).
+
+Apesar disso, a dispersão permanece uniforme, semelhante às variáveis buying e maint.
+
+```
+       Persons
+Métrica	          Valor
+Média	            3.67
+Mediana	          4.0
+Moda             	2
+Variância	        1.56
+Desvio-padrão	    1.25
+Amplitude	        3
+```
+A variável persons apresentou a maior variância (1.56) e o maior desvio-padrão entre todas as variáveis explicativas.
+
+Isso indica maior dispersão dos dados e potencialmente maior influência na diferenciação entre observações durante a clusterização.
+
+```
+    Lug_boot e Safety
+Métrica         	Valor
+Média	            2.00
+Mediana	          2.0
+Variância	        0.67
+Desvio-padrão	    0.82
+Amplitude       	2
+```
+Essas variáveis possuem apenas três níveis possíveis (1 a 3), o que naturalmente reduz sua variabilidade.
+
+Apesar da menor dispersão, a variável safety é conhecida por exercer forte influência na classificação final dos veículos.
+
+```
+  Class (Variável Alvo)
+Métrica	          Valor
+Média	            1.41
+Mediana	          1.0
+Moda            	1
+Variância	        0.55
+Desvio-padrão   	0.74
+Amplitude	        3
+```
+A variável class apresentou média próxima de 1, mediana igual a 1 e moda igual a 1, indicando forte concentração na categoria "unacc".
+
+Isso demonstra que o dataset é estruturalmente desbalanceado, com predominância de veículos classificados como inaceitáveis.
+
+O desvio-padrão reduzido confirma essa concentração nas classes mais baixas.
+
+A análise estatística revelou três aspectos fundamentais:
+* Equilíbrio estrutural nas variáveis explicativas.
+As variáveis buying, maint, doors e persons apresentam distribuição relativamente uniforme.
+* Desbalanceamento da variável alvo.
+A classe "unacc" predomina significativamente no conjunto de dados.
+* Influência potencial da variável safety.
+Mesmo com menor variância, apresenta maior relação com a variável class.
+
+Além disso, a variável persons apresentou maior variabilidade, podendo contribuir significativamente para a diferenciação entre grupos na etapa de clusterização.
+
+---
+
+## 📈 Visualização dos Dados
+
+**Arquivo: visualizacao_dados.py**
+
+---
+
+## 🤖 Clusterização Hierárquica
+
+**Arquivo: clusterizacao.py**
+
+---
+
+## 🧠 Conclusão
 
 
 
