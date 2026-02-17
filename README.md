@@ -12,7 +12,7 @@ Este trabalho apresenta uma análise exploratória e estrutural do Car Evaluatio
 ├── visualizaçao_dados.py        # Visualização e análise dos dados
 ├── clusterizaçao_gower.py       # Clusterização hierárquica 
 ├── Carr_dataset_ajustado.csv    # Dataset ajustado
-├── imagem                       # Imagens de resultados
+├── imagens_Car_Evaliation       # Imagens de resultados
 └── README.md
 ```
 
