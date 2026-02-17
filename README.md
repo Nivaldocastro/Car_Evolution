@@ -13,6 +13,11 @@ Este trabalho apresenta uma análise exploratória e estrutural do Car Evaluatio
 ├── clusterizaçao_gower.py       # Clusterização hierárquica 
 ├── Carr_dataset_ajustado.csv    # Dataset ajustado
 ├── imagens_Car_Evaliation       # Imagens de resultados
+│   ├── boxplot_.png               # Boxplot buying
+│   ├── boxplot_2.png              # Boxplot doors
+│   ├── boxplot_3.png              # Boxplot safety
+│   ├── matriz_correlacao.png      # Matriz de correlação
+│   └── dendograma.png             # Dendograma
 └── README.md
 ```
 
@@ -218,8 +223,47 @@ Além disso, a variável persons apresentou maior variabilidade, podendo contrib
 
 Nesta etapa foi feito uma visualização dos dados através de uma matriz de correlação e boxplots com o objetivo de entender as correlações presentes entre as variáveis.
 
+![Matriz de correlação ](matriz_correlacao.png)
+
+Ao analisar a Matriz de correlação, percebe-se visualmente que:
+* A Variável alvo `class` é a unica visualmente correlacionada
+* As variáveis buying, maint, doors, persons, lug_boot e safety possuem uma correlação extremamente pequena, ou seja, seu valores são muito próximos de 0.
+```
+                buying         maint  ...        safety     class
+buying    1.000000e+00 -2.072211e-15  ... -1.554300e-15 -0.282750
+maint    -2.072211e-15  1.000000e+00  ... -2.588623e-16 -0.232422
+doors     4.242286e-15  7.975102e-16  ...  9.909683e-17  0.066057
+persons   7.983938e-16  1.883561e-16  ...  1.362772e-17  0.373459
+lug_boot -1.525866e-16 -1.216188e-16  ...  7.131641e-18  0.157932
+safety   -1.554300e-15 -2.588623e-16  ...  1.000000e+00  0.439337
+class    -2.827504e-01 -2.324215e-01  ...  4.393373e-01  1.000000
+
+```
+De forma mais precisa, conseguimos análisar que essas variáveis são realmente possuem uma correlação quase 0 entre elas. 
+
+**Sobre a variável alvo**
+Ao analisar as correlações com a variável alvo, percebe-se que a variável safety possue uma maior correlação enquanto o buying possue uma maior morrelação (negativa).
 
 
+![Boxplot buying x class ](/imagens_Car_Evaliation/boxplot_.png)
+
+Ao analisarmos o boxplot do buying x class, Percebe-se que 
+* A classe 1 possue uma maior variáncia enquanto sua medianá fica em `3`.
+* Na classe 2 percebe-se uma mencentração por valores mais medianos.
+* Na classe 3 e 4 percebe-se que seus valores variam entre `1 a 2`.
+Portando, concluimos visualmente que quanto maior o preço do carro, menor vai ser sua avaliação
+
+![Boxplot doors x class ](boxplot_2.png)
+
+Ao analisarmos o boxplot do doors x class, Percebe-se que não tem muita diferença entre o número de portar para que o carro seja avaliado como aceitavel ou não.
+
+![Boxplot safety x class ](boxplot_3.png)
+
+Ao analisarmos o boxplot do doors x class, Percebe-se 
+* A classe 1 possue uma concentração maior de safety entre 1 a 2
+* A classe 2 e 3 possue uma variáncia mais concentrada entre 2 e 3
+* A classe 4 possue seus valores de safety em 3
+Portanto, conclue-se que há uma correlação positiva, ou seja, quanto maior a segurança do carro maior será a avaliação.
 
 
 ---
