@@ -216,6 +216,11 @@ Além disso, a variável persons apresentou maior variabilidade, podendo contrib
 
 **Arquivo: visualizacao_dados.py**
 
+Nesta etapa foi feito uma visualização dos dados através de uma matriz de correlação e boxplots com o objetivo de entender as correlações presentes nas variáveis.
+
+
+
+
 ---
 
 ## 🤖 Clusterização Hierárquica
